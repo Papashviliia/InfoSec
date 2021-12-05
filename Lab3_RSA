@@ -1,0 +1,49 @@
+using namespace std;
+#include <iostream>
+#include <math.h>
+#include "bigint-2010.04.30\BigInteger.hh"
+
+
+bool Primarity(int a, int b) {
+	while (a > 0 && b > 0)
+		if (a > b) a %= b;
+		else b %= a;
+	if (a + b == 1) return true;
+	else return false;
+}
+
+int binpow(int a, int n) {
+	int d = 1;
+	while (1) {
+		if ((d * a) % n == 1) return d;
+		else d++;
+	}
+}
+
+void main() {
+	int p = 7, q = 5;
+	int n = p * q;
+	int phi = (p - 1) * (q - 1);
+	long e = 0;
+	for (int i = 2; i < phi; i++)
+		if (Primarity(i, phi)) e = i;
+	long d = binpow(e, phi);
+
+	cout << "Enter message (number ranged 0 to 1400): " << endl;
+	BigInteger m;
+	long s;
+	cin >> s;
+	m = s;
+	for (int i = 0; i < e; i++) m* m;
+	m %= n;
+	cout << "After public key: " << s << endl;
+	m = s;
+	for (int i = 0; i < d; i++) m* m;
+	m %= n;
+	s = m.toLong();
+	cout << "After private key: " << s << endl;
+
+
+
+
+}
