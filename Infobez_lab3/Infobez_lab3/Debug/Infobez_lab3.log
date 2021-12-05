@@ -1,0 +1,9 @@
+﻿  Source.cpp
+C:\Users\Admin\Google Диск\Информационная безопасность\Infobez_lab3\Infobez_lab3\Source.cpp(23,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+Source.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __thiscall BigInteger::operator=(class BigInteger const &)" (??4BigInteger@@QAEXABV0@@Z) в функции _main.
+Source.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __thiscall BigInteger::BigInteger(long)" (??0BigInteger@@QAE@J@Z) в функции _main.
+Source.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __thiscall BigInteger::BigInteger(int)" (??0BigInteger@@QAE@H@Z) в функции _main.
+Source.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: long __thiscall BigInteger::toLong(void)const " (?toLong@BigInteger@@QBEJXZ) в функции _main.
+Source.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __thiscall BigInteger::multiply(class BigInteger const &,class BigInteger const &)" (?multiply@BigInteger@@QAEXABV1@0@Z) в функции "public: class BigInteger __thiscall BigInteger::operator*(class BigInteger const &)const " (??DBigInteger@@QBE?AV0@ABV0@@Z).
+Source.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __thiscall BigInteger::divideWithRemainder(class BigInteger const &,class BigInteger &)" (?divideWithRemainder@BigInteger@@QAEXABV1@AAV1@@Z) в функции "public: void __thiscall BigInteger::operator%=(class BigInteger const &)" (??_1BigInteger@@QAEXABV0@@Z).
+C:\Users\Admin\Google Диск\Информационная безопасность\Infobez_lab3\Debug\Infobez_lab3.exe : fatal error LNK1120: неразрешенных внешних элементов: 6
